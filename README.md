@@ -10,9 +10,14 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
-
+      #include <stdio.h>
+      int main() {
+         int a=44;
+         printf("After Left Shift Operation value of %d is: %d",a,a<<3);
+    }
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/fd9a43b3-b8de-4f88-829f-49a0affc05c2)
 
 
 
@@ -27,7 +32,6 @@ Thus the program to perform the basic left shift operation for 44 integer number
 
 
 
- 
  
 
 
@@ -47,10 +51,23 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
-
+     #include <stdio.h>
+     int main() {
+        int a,b;
+        printf("Enter the first number : ");
+        scanf("%d",&a);
+        printf("Enter the first number : ");
+        scanf("%d",&b);
+        if(a==b) {
+            printf("The two numbers are equal");
+     }  else{
+            printf("The two numbers are not equal");
+       } 
+    }
 
 ## OUTPUT
-           
+![image](https://github.com/user-attachments/assets/932ec62c-705d-44b7-b5a2-da63b7f52e9e)
+         
 ## RESULT
 
 Thus the program to check whether the two numbers are equal or not using simple if statement has been executed successfully
@@ -70,9 +87,23 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+   #include <stdio.h>
+   #include <ctype.h>
+   int main() {
+       char a[100];
+       printf("Enter the string : ");
+       scanf("%[^\n]",a);
+       int i=0;
+       while(a[i]) {
+           a[i]=tolower(a[i]);
+           i++;
+    }
+    printf("Lower case String is: %s",a);
+}
 
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/cb2d9a42-cfed-44d8-a748-ddf30f1c6f50)
 
 
 
@@ -95,9 +126,27 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
-
+      #include <stdio.h>
+      int main() {
+    char str[1000];
+    int i = 0, Count = 0;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    if (str[0] != '\n') {
+        do {
+            if ((str[i] != ' ' && str[i] != '\n') &&
+                (str[i + 1] == ' ' || str[i + 1] == '\n' || str[i + 1] == '\0')) {
+                Count++;
+            }
+            i++;
+         } while (str[i] != '\0');
+       }
+        printf("Total number of words: %d\n",Count);
+        return 0;
+     }
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/1b5ab3d8-cdce-4bdb-8cf5-d08e79f7d6fe)
 
 
 
