@@ -87,23 +87,24 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
-   #include <stdio.h>
-   #include <ctype.h>
-   int main() {
-       char a[100];
-       printf("Enter the string : ");
-       scanf("%[^\n]",a);
-       int i=0;
-       while(a[i]) {
-           a[i]=tolower(a[i]);
-           i++;
+      #include <stdio.h>
+      #include <ctype.h>
+      int main() {
+         char a[100];
+         printf("Enter the string : ");
+         scanf("%[^\n]",a);
+         int i=0;
+         while(a[i]) {
+             a[i]=tolower(a[i]);
+             i++;
+        }
+        printf("Lower case String is: %s",a);
     }
-    printf("Lower case String is: %s",a);
-}
 
 ## OUTPUT
 
-![image](https://github.com/user-attachments/assets/cb2d9a42-cfed-44d8-a748-ddf30f1c6f50)
+![image](https://github.com/user-attachments/assets/7fb25fc4-c6fa-4305-ad8f-5226d79bdbab)
+
 
 
 
